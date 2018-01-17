@@ -19,24 +19,6 @@
 3. In XCode, in the project navigator, select your project. Add `libRNAltheaTalkable.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
-### Additional note for iOS:
-
-1. Inside Info.plist: 
-  - Edit CFBundleURLTypes > CFBundleURLSchemes to the specific scheme (eg: __RN_CONFIG_TALKABLE_SCHEME_ID, __RN_CONFIG_TALKABLE_SCHEME_MY)
-  - Edit LSApplicationQueriesSchemes to the specific scheme (eg: __RN_CONFIG_TALKABLE_SCHEME_ID, __RN_CONFIG_TALKABLE_SCHEME_MY)
-2. Inside AppDelegate.m add these lines:
-
- ```javascript
- 
- #import <TalkableSDK/TalkableSDK.h>
- [[Talkable manager] handleOpenURL:url];
- 
-  NSString *talkableAppId = [ReactNativeConfig envFor:@"TALKABLE_APP_ID"];
-  NSString *talkableSiteSlug = [ReactNativeConfig envFor:@"TALKABLE_ID"];
-  [[Talkable manager] setApiKey:talkableAppId andSiteSlug:talkableSiteSlug];
-  
-  ```
-  
 
 #### Android
 
