@@ -1,6 +1,6 @@
 {
     "name": "react-native-althea-talkable",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "React native module for Talkable",
     "main": "index.js",
     "scripts": {
